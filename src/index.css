@@ -1,0 +1,254 @@
+@import '@mdi/font/css/materialdesignicons.css';
+@font-face {
+  font-family: DIN Next TR Regular;
+  src: url(/fonts/DINNextLTPro-Regular.woff) format('woff'), url(/fonts/DINNextLTPro-Regular.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: DIN Next TR Medium;
+  src: url(/fonts/DINNextLTPro-Medium.woff) format('woff'), url(/fonts/DINNextLTPro-Medium.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: DIN Next TR Bold;
+  src: url(/fonts/DINNextLTPro-Bold.woff) format('woff'), url(/fonts/DINNextLTPro-Bold.woff2) format('woff2');
+}
+
+:root {
+  --font-regular: DIN Next TR Regular, -apple-system, system-ui, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+  --font-medium: DIN Next TR Medium, -apple-system, system-ui, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+  --font-bold: DIN Next TR Bold, -apple-system, system-ui, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+
+  --color-background1: black;
+  --color-background2: rgba(248, 250, 253, 0.1);
+  --color-background3: rgba(248, 250, 253, 0.2);
+  --color-background4: rgba(248, 250, 253, 0.28);
+  --color-background5: rgba(248, 250, 253, 0.36);
+  --color-background6: rgba(248, 250, 253, 0.36);
+  --color-foreground1: rgba(248, 250, 253, 0.48);
+  --color-foreground2: rgba(248, 250, 253, 0.56);
+  --color-foreground3: white;
+  --color-foreground4: black;
+
+  --color-primary-blue1: rgba(27, 164, 255, 0.5);
+  --color-primary-blue2: rgba(27, 164, 255, 0.8);
+  --color-primary-blue3: rgba(27, 164, 255, 0.85);
+  --color-primary-blue4: rgba(27, 164, 255, 0.9);
+  --color-secondary-blue1: rgba(27, 164, 255, 0.3);
+  --color-secondary-blue2: rgba(27, 164, 255, 0.35);
+  --color-secondary-blue3: rgba(27, 164, 255, 0.4);
+
+  --color-primary-green1: rgba(19, 255, 128, 0.5);
+  --color-primary-green2: rgba(19, 255, 128, 0.8);
+  --color-primary-green3: rgba(19, 255, 128, 0.85);
+  --color-primary-green4: rgba(19, 255, 128, 0.9);
+  --color-secondary-green1: rgba(19, 255, 128, 0.3);
+  --color-secondary-green2: rgba(19, 255, 128, 0.35);
+  --color-secondary-green3: rgba(19, 255, 128, 0.4);
+
+  --color-primary-red1: rgba(255, 78, 78, 0.5);
+  --color-primary-red2: rgba(255, 78, 78, 0.8);
+  --color-primary-red3: rgba(255, 78, 78, 0.85);
+  --color-primary-red4: rgba(255, 78, 78, 0.9);
+  --color-secondary-red1: rgba(255, 78, 78, 0.3);
+  --color-secondary-red2: rgba(255, 78, 78, 0.35);
+  --color-secondary-red3: rgba(255, 78, 78, 0.4);
+
+  --color-primary-orange1: rgba(255, 177, 24, 0.5);
+  --color-primary-orange2: rgba(255, 177, 24, 0.8);
+  --color-primary-orange3: rgba(255, 177, 24, 0.85);
+  --color-primary-orange4: rgba(255, 177, 24, 0.9);
+  --color-secondary-orange1: rgba(255, 177, 24, 0.3);
+  --color-secondary-orange2: rgba(255, 177, 24, 0.35);
+  --color-secondary-orange3: rgba(255, 177, 24, 0.4);
+
+  --max-width: 1200px;
+}
+
+.header {
+  background-color: black; 
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+.header-title {
+  margin: 0;
+  font-size: 24px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.25;
+  margin: 0;
+  padding-top: 40px;
+  box-sizing: border-box;
+}
+
+.notification {
+  color: red;
+  margin-top: 10px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative; /* Added */
+}
+
+input, button {
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.error-message {
+  position: absolute; /* Updated */
+  bottom: -20px; /* Adjust as needed */
+  left: 0;
+  color: red;
+  font-size: 0.8rem;
+  margin-left: 20px; 
+}
+
+@media (min-width: 600px) {
+  form {
+    flex-direction: row;
+    align-items: center;
+  }
+  input {
+    flex: 1;
+    margin-right: 10px;
+    margin-bottom: 0;
+  }
+  button {
+    margin-bottom: 0;
+  }
+}
+
+/* style for SocketList */
+
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+table th:last-child {
+  width: 100px; 
+}
+
+table td:last-child {
+  width: 100px;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+  
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: 0px;
+  height: 48px;
+  padding: 0 24px 0 16px;
+  cursor: pointer;
+}
+
+.btn-delete {
+  font-size: 16px;
+  color: red;
+  
+  >.mdi-delete-empty {
+    display: none;
+  }
+  
+  &:hover {
+    background-color: lighten(red, 48%);
+    
+    >.mdi-delete-empty {
+      display: block;
+    }
+    
+    >.mdi-delete {
+      display: none;
+    }
+  }
+  
+}
+
