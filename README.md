@@ -2,6 +2,10 @@
 
 This is a Vue.js application developed for monitoring one's stock prices in real-time using WebSocket connections. Users can subscribe to stocks by entering their ISIN numbers, and the application displays the latest price information for each subscribed stock. I've provided two sample ISIN below.
 
+## Demo 
+
+![app-demo](./src/assets/demo.gif)
+
 ## Technologies Used
 Overall, this project showcases the utilization of cutting-edge tools and technologies in web development, including Vue 3 with the Composition API, Vite for rapid development, TypeScript for type safety, and WebSocket communication for real-time data updates. By combining these elements, the application delivers a modern and responsive user interface while providing users with timely and accurate stock market information for subscribed stock.
 
